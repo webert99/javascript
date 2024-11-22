@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #inte{
+            font: normal 1.6em arial;
+            background-color: skyblue;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="inte">
+        interaja..
+    </div>
+    <script>
+         var a = window.document.getElementById('inte')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar )
+        a.addEventListener('mouseout',sair)
+
+        function clicar() {
+           
+            a.innerText = 'clicou!'
+            a.style.background = 'purple'
+        }
+        function entrar() {
+            a.innerText = 'Entrou'
+            a.style.background = 'grey'
+        }
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'skyblue'
+        }
+    </script>
+</body>
+</html>
