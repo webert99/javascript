@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Verificação de Nacionalidade</h1>
+        <input type="text" id="paisInput" placeholder="Digite o nome do país">
+        <button onclick="verificarNacionalidade()">Verificar Nacionalidade</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function verificarNacionalidade() {
+            var pais = document.getElementById('paisInput').value;
+            var resultado = `Vivendo em ${pais}`;
+            if(pais.toLowerCase() == 'brasil') {
+                resultado += '<br>Você é brasileiro';
+            } else {
+                resultado += '<br>Você é GRINGO';
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
